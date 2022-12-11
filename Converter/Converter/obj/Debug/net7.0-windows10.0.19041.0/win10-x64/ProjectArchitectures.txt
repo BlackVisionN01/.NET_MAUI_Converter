@@ -1,0 +1,1 @@
+D:\code\.net\Converter\Converter\Converter.csproj;x64

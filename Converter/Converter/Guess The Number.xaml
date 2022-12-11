@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Converter.GuessTheNumber"
+             Title="Guess The Number">
+    <ScrollView>
+        
+        <VerticalStackLayout>
+            
+            <Label 
+                Text="I am thinking of a number between"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="23"/>
+
+            <Label 
+                Text="1 and 100"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="23"/>
+
+            <Label 
+                Text="Try and guess it"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="20"
+                Margin="45"/>
+
+            <Label 
+                x:Name="ShowNumber"
+                Text=""
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="23"
+                Margin="10"/>
+
+            <Label 
+                x:Name="Guess"
+                Text=""
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="23"
+                Margin="10"/>
+
+            <Label 
+                Text="Try a number"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="18"/>
+
+            <Entry 
+                x:Name="GuessNumber"
+                Placeholder="Enter a number"
+                Margin="10"
+                TextChanged="OnEntryTextChanged"
+                Completed="OnEntryCompleted"
+                Keyboard="Numeric" />
+
+            <Button
+                x:Name="GuessButton"
+                Text="Guess"
+                SemanticProperties.Hint="For the guesing"
+                Clicked="GuessButtonClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
